@@ -6,7 +6,7 @@ module.exports = function(app) {
 
 	app.get('/api/*', function(req, res) {
 		var origin = req.originalUrl;
-		nearbySearchUrl = 'https://maps.googleapis.com/maps' + origin + "&key=AIzaSyDkE3ez-fPWeOcVI5jLs2lMdfvUhU9NU5A";
+		nearbySearchUrl = 'https://maps.googleapis.com/maps' + origin + "&key=YOUR-API-KEY-HERE";
 		 console.log( " nearbySearchUrl" +nearbySearchUrl); 
 		request(nearbySearchUrl, function (error, response, body) {
 			    if (!error && response.statusCode == 200) {
@@ -98,7 +98,7 @@ module.exports = function(app) {
 
 	console.log(" req.origin" +req.originalUrl);
 		console.log(" req.destination"+req.query.destination);
-		var url ="https://maps.googleapis.com/maps/api/directions/json?origin="+req.query.origin+"&destination="+req.query.destination+"&mode="+req.querymode +"&key=AIzaSyDkE3ez-fPWeOcVI5jLs2lMdfvUhU9NU5A";
+		var url ="https://maps.googleapis.com/maps/api/directions/json?origin="+req.query.origin+"&destination="+req.query.destination+"&mode="+req.querymode +"&key=YOUR-API-KEY-HERE";
 		console.log( " url" +url); 
 		request(url, function (error, response, body) {
 			    if (!error && response.statusCode == 200) {
