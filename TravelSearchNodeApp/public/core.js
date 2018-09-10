@@ -41,7 +41,7 @@ travelSearch.controller('mainController', function($scope, $http) {
 	$scope.reviewSelectedOption ="Google Reviews";
 	$scope.orderSelectedOption ="Default Order";
 	$scope.myLoc = "currentLoc";
-	$scope.APIKey ="AIzaSyBDIaOeP0fVpdj3NiCOE-BfsZiIWn-rPoE";
+	$scope.APIKey ="YOUR-API-KEY-HERE";
 	$scope.progressBarVisible =false;
 	// console.log("entered the controller");
 	
